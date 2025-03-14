@@ -1,3 +1,12 @@
+<!--
+TASKS:
+	1. Add both images to the `tailwind.config` object in `config.js`
+	2. Give `main` a background image using the mobile image.
+       (Make sure it doesn't repeat and is positioned at the bottom.)
+	3. Add a class that changes the background image to the desktop
+       image when the screen is larger than `md`
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,35 +21,39 @@
   <script src="config.js"></script>
 </head>
 
-<body class="bg-pale_orange flex justify-center">
-  <main class="bg-white w-full max-w-xs m-10 p-3">
+<body class="bg-pale_orange flex justify-center ">
+  <main class="bg-white w-full max-w-xs m-10 p-3 md:grid md:grid-cols-2 md:max-w-3xl md:gap-4 md:p-5 md:h-full shadow-[5px_5px_0_orange]">
     <img
       src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="orange with stem and leaf on a white-gray background" />
-    <h1 class="font-title text-2xl font-bold">A single orange</h1>
-    <p class="font-title text-md">with stem and leaf</p>
-    <h2 class="text-5xl font-light my-3">$1<span class="text-lg">.35</span></h2>
-    <p class="font-light text-gray-500">
-      Experience a burst of sunshine in every bite with this hand-picked,
-      sun-drenched jewel of the citrus world.
-    </p>
-    <button>Add to Cart</button>
-    <svg class="fill-orange-200" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
-      <path
-        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
-    </svg>
-    <h3>Features</h3>
-    <ul>
-      <li>
-        <span>Nature's candy</span>: A symphony of sweet and tangy notes
-      </li>
-      <li><span>Vibrant hue</span>: A visual feast for the eyes</li>
-      <li><span>Invigorating aroma</span>: A sensory delight</li>
-      <li><span>Nutrient-rich</span>: Bursting with Vitamin C</li>
-      <li>
-        <span>Perfect for</span>: snacking, juicing, or culinary creations
-      </li>
-    </ul>
+    <section>
+      <h1 class="font-title text-2xl font-bold md:text-3xl">A single orange</h1>
+      <p class="font-title text-md md:text-xl">with stem and leaf</p>
+      <h2 class="text-5xl font-light my-3">$1<span class="text-lg">.35</span></h2>
+      <p class="font-light text-gray-500 text-sm">
+        Experience a burst of sunshine in every bite with this hand-picked,
+        sun-drenched jewel of the citrus world.
+      </p>
+      <div class="flex justify-between items-center my-4">
+        <button class="bg-gradient-to-b from-light_orange to-orange text-white pt-2 pb-1 px-4 text-sm uppercase flex-grow hover:bg-gradient-to-t md:flex-none">Add To Cart</button>
+        <svg class="fill-orange ml-2 transition-transform hover:scale-125 duration-300" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+          <path
+            d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-light text-gray-500 uppercase">Features</h3>
+      <ul class="list-disc marker:text-orange text-sm font-light text-gray-600">
+        <li class="ml-3 pl-2 text-gray-600">
+          <span class="font-medium">Nature's candy</span>: A symphony of sweet and tangy notes
+        </li>
+        <li class="ml-3 pl-2 text-gray-500"><span class="font-medium">Vibrant hue</span>: A visual feast for the eyes</li>
+        <li class="ml-3 pl-2 text-gray-500"><span class="font-medium">Invigorating aroma</span>: A sensory delight</li>
+        <li class="ml-3 pl-2 text-gray-500"><span class="font-medium">Nutrient-rich</span>: Bursting with Vitamin C</li>
+        <li class="ml-3 pl-2 text-gray-500">
+          <span class="font-medium">Perfect for</span>: snacking, juicing, or culinary creations
+        </li>
+      </ul>
+    </section>
   </main>
 </body>
 
